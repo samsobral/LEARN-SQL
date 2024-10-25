@@ -1,0 +1,62 @@
+SELECT
+	*
+FROM 
+	DimStore
+
+SELECT 
+	StoreKey,
+	StoreName,
+	StorePhone 
+FROM 
+	DimStore
+
+-- tabela para funcionários
+
+-- Select e from seleciona todas as linhas da tabela MAS DA PRA USAR SELECT TOP QUE ESELECIONA AS 10 PRIMEIRAS LINHAS
+
+SELECT TOP(6) 
+	*
+FROM 
+DimProduct
+
+SELECT TOP(10) PERCENT * FROM DimProduct
+
+SELECT TOP (10) * FROM FactOnlineSales
+--APRENDENDO SELECT DISTINCT
+
+--RETORNANDO TODAS LINHAS DA TABELA DIM PRODUCT
+
+SELECT * FROM DimProduct
+
+-- RETORNANDO VALORES DISTINTOS DAS COLUNAS COLORNAME DA TABELA DIM PRODUCT
+
+SELECT DISTINCT ColorName FROM DimProduct
+
+--RETORNANDO TODAS LINHAS DA TABELA DIM EMPLOYEE
+
+SELECT * FROM DimEmployee
+
+-- SELECIONANDO OS VALORES DISTINTOS DA COLUNA DEPARTMENT NAME
+SELECT
+	DISTINCT  DepartmentName
+FROM
+	DimEmployee
+
+-- Aprendendo o comando  AS : que renomeia as colunas(aliasing)
+--Selecionando as 3 colunas da tabela dimProduct
+
+SELECT
+	ProductName,
+	BrandName,
+	ColorName 
+FROM 
+	DimProduct
+
+	-- agora vamos renomear usando o comando AS
+
+SELECT
+	ProductName AS PRODUTO,
+	BrandName AS 'MARCA',
+	ColorName AS "COR"
+FROM 
+	DimProduct
